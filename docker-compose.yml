@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  dotnetjobs.applicants.api:
+    image: dotnetjobs.applicants.api
+    build:
+      context: .
+      dockerfile: Services/DotnetJobs.Applicants.Api/Dockerfile
+    ports:
+    - 8081:80
+    container_name: dotnetjobs.applicants.api
+
+  dotnetjobs.jobs.api:
+    image: dotnetjobs.jobs.api
+    build:
+      context: .
+      dockerfile: Services/DotnetJobs.Jobs.Api/Dockerfile
+    ports:
+    - 8082:80
+    container_name: dotnetjobs.jobs.api
+
+  dotnetjobs.identity.api:
+    image: dotnetjobs.identity.api
+    build:
+      context: .
+      dockerfile: Services/DotnetJobs.Identity.Api/Dockerfile
+    ports:
+    - 8083:80
+    container_name: dotnetjobs.identity.api

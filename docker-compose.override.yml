@@ -13,10 +13,8 @@ services:
     ports:
       - "80"
 
-
   dotnetjobs.jobs.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "80"
-
